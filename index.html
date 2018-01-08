@@ -3,95 +3,97 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<title>FOODMAP</title>
+	<title>Foodmap</title>
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<!-- Optional theme -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300" rel="stylesheet">
 	<link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
-	<div class="container-fluid">
+	<div class="">
 		
-		<!-- Splash -->
+		<!-- SPLASH -->
 		<div class="row">
-			<div class="col-xs-12" id="splash">
-				<h1 class="splashTitle">FOODMAP</h1>
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="splash">
+				<h1 class="splashTitle">Foodmap</h1>
 				<i class="fa fa-circle-o-notch fa-spin fa-3x fa-fw"></i>
 				<span class="sr-only">Loading...</span>
 			</div>
 		</div>
 	
-		<!-- título principal -->
+		<!-- TITULO PRINCIPAL -->
 		<div class="row firstSection">
-			<div class="col-xs-12">
-				<h2><i class="fa fa-cutlery" aria-hidden="true"></i>FOODMAP</h2>
+			<div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2">
+				<h2>Foodmap</h2>
 				<hr class="line">
 			</div>
+		</div> <!--row-->
 		
-		<!-- mapa -->
-			<div class="col-xs-12">
+		<!-- MAPA -->
+		<section <class class="mapa">
+			<div class="row">	
+			<!-- mapa movil -->
+				<div class="col-xs-12 col-sm-12 hidden-md hidden-lg mapa1">
 				<iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d26756.38489345955!2d-71.62666804171717!3d-33.042033871116466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1srestaurant+cerca+de+Valpara%C3%ADso!5e0!3m2!1ses-419!2scl!4v1513236965693" width="280" height="150" frameborder="0" style="border:0" allowfullscreen></iframe>
-			</div>
-		
-		<!-- input filtro -->
-			<div class="col-xs-12 restaurantes">
+				</div>
+			<!-- mapa desktop -->
+				<div class="hidden-xs hidden-sm col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d26756.38489345955!2d-71.62666804171717!3d-33.042033871116466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1srestaurant+cerca+de+Valpara%C3%ADso!5e0!3m2!1ses-419!2scl!4v1513236965693" width="650" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
+				</div>			
+			</div><!--row-->
+		</class>></section>
+
+		<!-- INPUT FILTRO -->
+		<div class="row restaurantes">
+			<div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2">
 				<h3>Comida cerca de ti</h3>
 				
-					<select class="form-control">
-						<option value="">Seleccione</option>
-						<option value="comidaPeruana">Comida peruana</option>
-						<option value="comidaChina">Comida china</option>
-						<option value="comidaItaliana">Comida italiana</option>
-						<option value="pescadosYmariscos">Pescados y mariscos</option>
-					</select>
+				<select id="filter" class="form-control">
+					<option value="todas">Seleccione su opción</option>
+					<option value="comidaPeruana">Comida peruana</option>
+					<option value="comidaChina">Comida china</option>
+					<option value="comidaItaliana">Comida italiana</option>
+					<option value="pescadosYmariscos">Pescados y mariscos</option>
+				</select>
 
-					<article class="comidaPeruana"><img src="assets/img/pollada-peruana.jpg" alt="#"></article>
-					<article class="comidaPeruana"><img src="assets/img/aji-de-gallina.jpg" alt=""></article>
-					
-					<article class="comidaChina"></article>
-					<article class="comidaChina"></article>
+			</div><!-- div class restaurantes -->
+		</div><!-- div class restaurantes -->
 
-					<article class="comidaItaliana"></article>
-					<article class="comidaItaliana"></article>
-					
-					<article class="pescadosYmariscos"></article>
-					<article class="pescadosYmariscos"></article>
+		<div id="restaurants">		
+			<!-- DIV VACÍO DONDE IRÁN LOS RESTAURANTES -->
+			<!-- <div class="row restaurant-name">
+				<div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2">
+					<div class="restaurant-food modal-trigger" href="#modal0">
+						<h3 class="name"></h3>
+					</div>
+					ESTRUCTURA DEL MODAL
+					<div id="modal0" class="modal modal-fixed-footer">
+            <div class="modal-content restaurant">
+              <div class="restaurant-logo"></div>
+              	<h4 class="restaurant-name-title">White Witch</h4>
+              	<p class="restaurant-info">A bunch of text</p>
+              	<p class="food-type">Narniana</p>
+              	<div class="restaurant-photo"></div>
+              	<p class="restaurant-direction-title">Dirección</p>
+              	<p class="restaurant-direction"><i class="small material-icons">location_on</i> El ropero 1154</p>
+            </div>
+            <div class="modal-footer">
+              <a href="#!" class="modal-action modal-close waves-effect btn-flat btn-orange center-align">Pedir</a>
+            </div>
+          </div>
+        </div>
+			</div> -->
+		</div>
+		
+	</div> <!-- container-fluid -->
 
-			</div>
-
-
-
-
-			</div>
-		</div> <!--row-->
-
-
-
-			<div id="comidaPeruana" class="elemento">
-				<div class="alert alert-warning" role="alert" id="comidaPeruana">Comida peruana</div>
-			</div>
-			<div id="comidaChina" class="elemento">
-				<div class="alert alert-warning" role="alert">Comida china</div>
-			</div>
-			<div id="comidaItaliana" class="elemento">
-				<div class="alert alert-warning" role="alert">Comida italiana</div>
-			</div>
-			<div id="pescadosYmariscos" class="elemento">
-				<div class="alert alert-warning" role="alert">Pescados y mariscos</div>
-			</div>
-
-
-		<!-- fotografías menú -->
-			<div class="col-xs-4">
-				
-
-	
-	</div> <!-- container general -->
 
  	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	<script src="https://use.fontawesome.com/e93f958285.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script src="assets/js/data.js"></script>
 	<script src="assets/js/app.js"></script>
 </body>
 </html>
